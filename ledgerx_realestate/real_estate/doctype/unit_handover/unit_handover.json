@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "contract",
+  "unit",
+  "customer",
+  "status",
+  "cb1",
+  "handover_date",
+  "received_by",
+  "keys",
+  "electricity_reading",
+  "water_reading",
+  "warranty_months",
+  "warranty_end",
+  "sb_chk",
+  "checklist",
+  "sb_def",
+  "defects"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "HND-.YYYY.-.#####",
+   "default": "HND-.YYYY.-.#####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Unit Contract",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Property Unit",
+   "fetch_from": "contract.unit",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "fetch_from": "contract.customer",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nCompleted\nCancelled",
+   "default": "Scheduled",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "handover_date",
+   "fieldtype": "Date",
+   "label": "Handover Date",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received By"
+  },
+  {
+   "fieldname": "keys",
+   "fieldtype": "Int",
+   "label": "Keys Handed Over"
+  },
+  {
+   "fieldname": "electricity_reading",
+   "fieldtype": "Float",
+   "label": "Electricity Meter"
+  },
+  {
+   "fieldname": "water_reading",
+   "fieldtype": "Float",
+   "label": "Water Meter"
+  },
+  {
+   "fieldname": "warranty_months",
+   "fieldtype": "Int",
+   "label": "Warranty (months)"
+  },
+  {
+   "fieldname": "warranty_end",
+   "fieldtype": "Date",
+   "label": "Warranty Ends",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_chk",
+   "fieldtype": "Section Break",
+   "label": "Checklist"
+  },
+  {
+   "fieldname": "checklist",
+   "fieldtype": "Table",
+   "label": "Checklist",
+   "options": "Handover Check"
+  },
+  {
+   "fieldname": "sb_def",
+   "fieldtype": "Section Break",
+   "label": "Defects"
+  },
+  {
+   "fieldname": "defects",
+   "fieldtype": "Table",
+   "label": "Defects",
+   "options": "Handover Defect"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Unit Handover",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "icon": "fa fa-key",
+ "allow_rename": 0
+}

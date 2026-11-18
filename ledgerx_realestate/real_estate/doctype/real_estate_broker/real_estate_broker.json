@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "broker_name",
+  "broker_type",
+  "phone",
+  "email",
+  "cb1",
+  "tax_id",
+  "commission_pct",
+  "active",
+  "supplier"
+ ],
+ "fields": [
+  {
+   "fieldname": "broker_name",
+   "fieldtype": "Data",
+   "label": "Broker or Company",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "broker_type",
+   "fieldtype": "Select",
+   "label": "Kind",
+   "options": "Individual\nCompany",
+   "default": "Individual"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_id",
+   "fieldtype": "Data",
+   "label": "National or Tax ID"
+  },
+  {
+   "fieldname": "commission_pct",
+   "fieldtype": "Percent",
+   "label": "Commission (%)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier (Payable Account)",
+   "options": "Supplier",
+   "read_only": 1,
+   "description": "Created automatically: commissions are paid through it."
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Real Estate Broker",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "field:broker_name",
+ "icon": "fa fa-handshake-o",
+ "allow_rename": 0
+}

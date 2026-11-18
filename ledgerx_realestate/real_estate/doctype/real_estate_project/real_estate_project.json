@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_name",
+  "project_type",
+  "status",
+  "cost_center",
+  "erp_project",
+  "cb1",
+  "manager",
+  "start_date",
+  "expected_end_date",
+  "sales_target",
+  "sb_loc",
+  "city",
+  "location",
+  "land_area",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Kind",
+   "options": "Residential\nCommercial\nAdministrative\nMixed Use\nVillas\nResort\nLand",
+   "default": "Residential",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planning\nSelling\nUnder Construction\nDelivered\nCompleted",
+   "default": "Planning",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "reqd": 1,
+   "description": "Sales, contractor claims and expenses of the project are posted to it: that is the project's profit and loss."
+  },
+  {
+   "fieldname": "erp_project",
+   "fieldtype": "Link",
+   "label": "Project (Tasks and Costs)",
+   "options": "Project",
+   "read_only": 1,
+   "description": "Created automatically: attach expenses, tasks and timesheets to it."
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "manager",
+   "fieldtype": "Link",
+   "label": "Project Manager",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion"
+  },
+  {
+   "fieldname": "sales_target",
+   "fieldtype": "Currency",
+   "label": "Sales Target"
+  },
+  {
+   "fieldname": "sb_loc",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "land_area",
+   "fieldtype": "Float",
+   "label": "Land Area (m²)"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Real Estate Project",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "field:project_name",
+ "title_field": "project_name",
+ "icon": "fa fa-building",
+ "allow_rename": 0
+}

@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "project",
+  "effective_from",
+  "active",
+  "sb_rows",
+  "rows"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Real Estate Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": 1
+  },
+  {
+   "fieldname": "sb_rows",
+   "fieldtype": "Section Break",
+   "label": "Prices"
+  },
+  {
+   "fieldname": "rows",
+   "fieldtype": "Table",
+   "label": "Prices by Unit Type",
+   "options": "Unit Price Row",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Unit Price List",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "format:{project}-{title}",
+ "title_field": "title",
+ "icon": "fa fa-tags",
+ "allow_rename": 0
+}

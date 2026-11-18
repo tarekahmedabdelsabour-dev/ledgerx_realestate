@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "unit",
+  "customer",
+  "category",
+  "priority",
+  "status",
+  "cb1",
+  "reported_on",
+  "under_warranty",
+  "assigned_employee",
+  "assigned_supplier",
+  "sb_d",
+  "description",
+  "resolution",
+  "sb_c",
+  "cost",
+  "charge",
+  "sales_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MNT-.YYYY.-.#####",
+   "default": "MNT-.YYYY.-.#####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Property Unit",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Plumbing\nElectrical\nFinishing\nAir Conditioning\nStructural\nElevator\nOther",
+   "default": "Other",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nNormal\nHigh\nEmergency",
+   "default": "Normal"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "New\nAssigned\nIn Progress\nDone\nClosed",
+   "default": "New",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reported_on",
+   "fieldtype": "Date",
+   "label": "Reported On",
+   "default": "Today"
+  },
+  {
+   "fieldname": "under_warranty",
+   "fieldtype": "Check",
+   "label": "Under Warranty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assigned_employee",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "assigned_supplier",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "sb_d",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Problem",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resolution",
+   "fieldtype": "Small Text",
+   "label": "What Was Done"
+  },
+  {
+   "fieldname": "sb_c",
+   "fieldtype": "Section Break",
+   "label": "Cost"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Our Cost"
+  },
+  {
+   "fieldname": "charge",
+   "fieldtype": "Currency",
+   "label": "Charged to the Owner",
+   "description": "Not charged while under warranty unless you enter it."
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Maintenance Request",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "icon": "fa fa-wrench",
+ "allow_rename": 0
+}

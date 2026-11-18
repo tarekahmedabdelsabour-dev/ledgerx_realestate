@@ -1,0 +1,259 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_number",
+  "project",
+  "status",
+  "phase",
+  "building",
+  "floor",
+  "cb1",
+  "unit_type",
+  "category",
+  "finishing",
+  "view",
+  "sb_area",
+  "area_built",
+  "area_garden",
+  "bedrooms",
+  "cb2",
+  "bathrooms",
+  "sb_price",
+  "premium_pct",
+  "list_price",
+  "cb3",
+  "cost_estimate",
+  "sb_sale",
+  "contract",
+  "owner_customer",
+  "cb4",
+  "warranty_end",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_number",
+   "fieldtype": "Data",
+   "label": "Unit Number",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Real Estate Project",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nReserved\nContracted\nDelivered\nBlocked\nRented",
+   "default": "Available",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "phase",
+   "fieldtype": "Link",
+   "label": "Phase",
+   "options": "Project Phase"
+  },
+  {
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "label": "Building",
+   "options": "Building"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Int",
+   "label": "Floor"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Link",
+   "label": "Unit Type",
+   "options": "Unit Type"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Apartment\nVilla\nDuplex\nPenthouse\nStudio\nChalet\nOffice\nShop\nClinic\nLand\nOther",
+   "default": "Apartment",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "finishing",
+   "fieldtype": "Select",
+   "label": "Finishing",
+   "options": "\nCore and Shell\nSemi Finished\nFully Finished"
+  },
+  {
+   "fieldname": "view",
+   "fieldtype": "Data",
+   "label": "View"
+  },
+  {
+   "fieldname": "sb_area",
+   "fieldtype": "Section Break",
+   "label": "Area and Rooms"
+  },
+  {
+   "fieldname": "area_built",
+   "fieldtype": "Float",
+   "label": "Built Area (m²)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "area_garden",
+   "fieldtype": "Float",
+   "label": "Garden or Roof Area (m²)"
+  },
+  {
+   "fieldname": "bedrooms",
+   "fieldtype": "Int",
+   "label": "Bedrooms"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bathrooms",
+   "fieldtype": "Int",
+   "label": "Bathrooms"
+  },
+  {
+   "fieldname": "sb_price",
+   "fieldtype": "Section Break",
+   "label": "Price"
+  },
+  {
+   "fieldname": "premium_pct",
+   "fieldtype": "Percent",
+   "label": "Floor, View or Corner Premium (%)",
+   "description": "Added on top of the price list."
+  },
+  {
+   "fieldname": "list_price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_estimate",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "sb_sale",
+   "fieldtype": "Section Break",
+   "label": "Sale"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Unit Contract",
+   "read_only": 1
+  },
+  {
+   "fieldname": "owner_customer",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warranty_end",
+   "fieldtype": "Date",
+   "label": "Warranty Ends",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Property Unit",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "format:{project}-{unit_number}",
+ "title_field": "unit_number",
+ "icon": "fa fa-home",
+ "search_fields": "unit_number,project,building",
+ "allow_rename": 0
+}

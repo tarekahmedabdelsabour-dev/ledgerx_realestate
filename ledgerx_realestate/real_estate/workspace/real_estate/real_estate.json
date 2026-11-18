@@ -1,0 +1,479 @@
+{
+ "charts": [
+  {
+   "chart_name": "Units by Status",
+   "label": "Units by Status"
+  },
+  {
+   "chart_name": "Units by Project",
+   "label": "Units by Project"
+  },
+  {
+   "chart_name": "Contracts per Month",
+   "label": "Contracts per Month"
+  },
+  {
+   "chart_name": "Maintenance by Category",
+   "label": "Maintenance by Category"
+  }
+ ],
+ "content": "[{\"id\": \"db017dedc7\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Real Estate</b></span>\", \"col\": 12}}, {\"id\": \"231aa027ad\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Unit Contract\", \"col\": 3}}, {\"id\": \"b52762df83\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Unit Reservation\", \"col\": 3}}, {\"id\": \"746118fe59\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Installments Due\", \"col\": 3}}, {\"id\": \"da693dbb41\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Property Unit\", \"col\": 3}}, {\"id\": \"81bf5ca0af\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Available Units\", \"col\": 3}}, {\"id\": \"89aef66c64\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Reserved Units\", \"col\": 3}}, {\"id\": \"61c5fb385a\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Contracts\", \"col\": 3}}, {\"id\": \"c32e15a446\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Draft Contracts\", \"col\": 3}}, {\"id\": \"db9ff6680f\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Cheques to Deposit\", \"col\": 3}}, {\"id\": \"ed0474118d\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Commissions Due\", \"col\": 3}}, {\"id\": \"616278b650\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Maintenance\", \"col\": 3}}, {\"id\": \"13f8df29a4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Leases\", \"col\": 3}}, {\"id\": \"4169738bf1\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Units by Status\", \"col\": 6}}, {\"id\": \"951a67534f\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Units by Project\", \"col\": 6}}, {\"id\": \"cd832febf0\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Contracts per Month\", \"col\": 6}}, {\"id\": \"9a6af4de3f\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Maintenance by Category\", \"col\": 6}}, {\"id\": \"3866621577\", \"type\": \"card\", \"data\": {\"card_name\": \"Projects\", \"col\": 4}}, {\"id\": \"447c6487d4\", \"type\": \"card\", \"data\": {\"card_name\": \"Sales Team\", \"col\": 4}}, {\"id\": \"af5b488a35\", \"type\": \"card\", \"data\": {\"card_name\": \"Construction\", \"col\": 4}}, {\"id\": \"94bf330dd7\", \"type\": \"card\", \"data\": {\"card_name\": \"After Sale\", \"col\": 4}}, {\"id\": \"03e74743c3\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}, {\"id\": \"deed90236e\", \"type\": \"card\", \"data\": {\"card_name\": \"Setup\", \"col\": 4}}, {\"id\": \"ae53ab2f1e\", \"type\": \"card\", \"data\": {\"card_name\": \"Related\", \"col\": 4}}]",
+ "creation": "2026-11-18 05:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 1,
+ "icon": "building-2",
+ "idx": 1,
+ "is_hidden": 0,
+ "label": "Real Estate",
+ "links": [
+  {
+   "type": "Card Break",
+   "label": "Projects",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 6,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Real Estate Project",
+   "link_type": "DocType",
+   "link_to": "Real Estate Project",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Project Phase",
+   "link_type": "DocType",
+   "link_to": "Project Phase",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Building",
+   "link_type": "DocType",
+   "link_to": "Building",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Unit Type",
+   "link_type": "DocType",
+   "link_to": "Unit Type",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Unit Price List",
+   "link_type": "DocType",
+   "link_to": "Unit Price List",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Payment Plan",
+   "link_type": "DocType",
+   "link_to": "Payment Plan",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Sales Team",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 2,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Real Estate Broker",
+   "link_type": "DocType",
+   "link_to": "Real Estate Broker",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Sales Commission",
+   "link_type": "DocType",
+   "link_to": "Sales Commission",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Construction",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 4,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Bill of Quantities",
+   "link_type": "DocType",
+   "link_to": "Bill of Quantities",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Construction Contract",
+   "link_type": "DocType",
+   "link_to": "Construction Contract",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Progress Claim",
+   "link_type": "DocType",
+   "link_to": "Progress Claim",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Construction Progress",
+   "link_type": "DocType",
+   "link_to": "Construction Progress",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "After Sale",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 3,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Owners Association",
+   "link_type": "DocType",
+   "link_to": "Owners Association",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Association Fee Run",
+   "link_type": "DocType",
+   "link_to": "Association Fee Run",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Rental Contract",
+   "link_type": "DocType",
+   "link_to": "Rental Contract",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Reports",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 6,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Unit Inventory",
+   "link_type": "Report",
+   "link_to": "Unit Inventory",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Contracts and Collection",
+   "link_type": "Report",
+   "link_to": "Contracts and Collection",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Installments Due",
+   "link_type": "Report",
+   "link_to": "Installments Due",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Collection Forecast",
+   "link_type": "Report",
+   "link_to": "Collection Forecast",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Project Profitability",
+   "link_type": "Report",
+   "link_to": "Project Profitability",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Contractor Claims",
+   "link_type": "Report",
+   "link_to": "Contractor Claims",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Setup",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 1,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Real Estate Settings",
+   "link_type": "DocType",
+   "link_to": "Real Estate Settings",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Related",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 7,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Customer",
+   "link_type": "DocType",
+   "link_to": "Customer",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Sales Invoice",
+   "link_type": "DocType",
+   "link_to": "Sales Invoice",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Payment Entry",
+   "link_type": "DocType",
+   "link_to": "Payment Entry",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Supplier",
+   "link_type": "DocType",
+   "link_to": "Supplier",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Purchase Invoice",
+   "link_type": "DocType",
+   "link_to": "Purchase Invoice",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Project",
+   "link_type": "DocType",
+   "link_to": "Project",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  },
+  {
+   "type": "Link",
+   "label": "Employee",
+   "link_type": "DocType",
+   "link_to": "Employee",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": "",
+   "only_for": ""
+  }
+ ],
+ "title": "Real Estate",
+ "modified": "2026-11-18 05:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Real Estate",
+ "number_cards": [
+  {
+   "label": "Available Units",
+   "number_card_name": "Available Units"
+  },
+  {
+   "label": "Reserved Units",
+   "number_card_name": "Reserved Units"
+  },
+  {
+   "label": "Active Contracts",
+   "number_card_name": "Active Contracts"
+  },
+  {
+   "label": "Draft Contracts",
+   "number_card_name": "Draft Contracts"
+  },
+  {
+   "label": "Cheques to Deposit",
+   "number_card_name": "Cheques to Deposit"
+  },
+  {
+   "label": "Commissions Due",
+   "number_card_name": "Commissions Due"
+  },
+  {
+   "label": "Open Maintenance",
+   "number_card_name": "Open Maintenance"
+  },
+  {
+   "label": "Active Leases",
+   "number_card_name": "Active Leases"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 24.0,
+ "shortcuts": [
+  {
+   "label": "Unit Contract",
+   "link_to": "Unit Contract",
+   "type": "DocType",
+   "doc_view": "List"
+  },
+  {
+   "label": "Unit Reservation",
+   "link_to": "Unit Reservation",
+   "type": "DocType",
+   "doc_view": "List"
+  },
+  {
+   "label": "Installments Due",
+   "link_to": "Installments Due",
+   "type": "Report",
+   "is_query_report": 1
+  },
+  {
+   "label": "Property Unit",
+   "link_to": "Property Unit",
+   "type": "DocType",
+   "doc_view": "List"
+  }
+ ]
+}

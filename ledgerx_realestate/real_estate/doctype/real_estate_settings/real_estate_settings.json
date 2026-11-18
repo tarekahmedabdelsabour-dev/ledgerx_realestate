@@ -1,0 +1,223 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "vat_rate",
+  "vat_account",
+  "sb_acc",
+  "sales_income_account",
+  "deposit_account",
+  "late_fee_income_account",
+  "cb1",
+  "commission_expense_account",
+  "construction_cost_account",
+  "retention_account",
+  "rental_income_account",
+  "service_income_account",
+  "maintenance_income_account",
+  "sb_def",
+  "reservation_days",
+  "commission_pct",
+  "salesman_commission_pct",
+  "commission_due_pct",
+  "cb2",
+  "late_fee_pct",
+  "grace_days",
+  "warranty_months",
+  "handover_needs_payment",
+  "salary_component"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vat_rate",
+   "fieldtype": "Percent",
+   "label": "VAT on Unit Sales (%)",
+   "default": 0
+  },
+  {
+   "fieldname": "vat_account",
+   "fieldtype": "Link",
+   "label": "VAT Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "sb_acc",
+   "fieldtype": "Section Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "sales_income_account",
+   "fieldtype": "Link",
+   "label": "Unit Sales Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "deposit_account",
+   "fieldtype": "Link",
+   "label": "Maintenance Deposit Account",
+   "options": "Account",
+   "description": "A liability: the deposits are held for the owners association."
+  },
+  {
+   "fieldname": "late_fee_income_account",
+   "fieldtype": "Link",
+   "label": "Late Fee Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_expense_account",
+   "fieldtype": "Link",
+   "label": "Commission Expense Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "construction_cost_account",
+   "fieldtype": "Link",
+   "label": "Construction Cost Account",
+   "options": "Account",
+   "description": "Contractor claims are posted here (an expense or a work-in-progress asset)."
+  },
+  {
+   "fieldname": "retention_account",
+   "fieldtype": "Link",
+   "label": "Retention Payable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "rental_income_account",
+   "fieldtype": "Link",
+   "label": "Rental Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "service_income_account",
+   "fieldtype": "Link",
+   "label": "Service Charge Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "maintenance_income_account",
+   "fieldtype": "Link",
+   "label": "Maintenance Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "sb_def",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "fieldname": "reservation_days",
+   "fieldtype": "Int",
+   "label": "Reservation Holds the Unit for (days)",
+   "default": 7
+  },
+  {
+   "fieldname": "commission_pct",
+   "fieldtype": "Percent",
+   "label": "Default Broker Commission (%)",
+   "default": 2
+  },
+  {
+   "fieldname": "salesman_commission_pct",
+   "fieldtype": "Percent",
+   "label": "Salesman Commission (%)",
+   "default": 0,
+   "description": "Paid through payroll. 0 switches it off."
+  },
+  {
+   "fieldname": "commission_due_pct",
+   "fieldtype": "Percent",
+   "label": "Commission Is Due When the Customer Has Paid (%)",
+   "default": 10
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "late_fee_pct",
+   "fieldtype": "Percent",
+   "label": "Late Fee per Month (%)",
+   "default": 0,
+   "description": "0 switches late fees off."
+  },
+  {
+   "fieldname": "grace_days",
+   "fieldtype": "Int",
+   "label": "Grace Days Before a Late Fee",
+   "default": 5
+  },
+  {
+   "fieldname": "warranty_months",
+   "fieldtype": "Int",
+   "label": "Warranty After Handover (months)",
+   "default": 12
+  },
+  {
+   "fieldname": "handover_needs_payment",
+   "fieldtype": "Check",
+   "label": "A Unit Is Handed Over Only When Everything Due Is Paid",
+   "default": 1
+  },
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Data",
+   "label": "Salary Component for Salesmen Commission",
+   "default": "Real Estate Commission"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Real Estate Settings",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "icon": "fa fa-cog",
+ "issingle": 1,
+ "allow_rename": 0
+}

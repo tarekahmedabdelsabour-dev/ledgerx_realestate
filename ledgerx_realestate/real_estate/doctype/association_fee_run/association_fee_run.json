@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "association",
+  "period",
+  "posting_date",
+  "status",
+  "cb1",
+  "invoices_count",
+  "total",
+  "sb_l",
+  "lines"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "AFR-.YYYY.-.###",
+   "default": "AFR-.YYYY.-.###",
+   "hidden": 1
+  },
+  {
+   "fieldname": "association",
+   "fieldtype": "Link",
+   "label": "Association",
+   "options": "Owners Association",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "label": "Period",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "For example 2026-12."
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPosted",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoices_count",
+   "fieldtype": "Int",
+   "label": "Invoices",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_l",
+   "fieldtype": "Section Break",
+   "label": "Charges"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Charges",
+   "options": "Fee Run Line",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Association Fee Run",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "icon": "fa fa-calculator",
+ "allow_rename": 0
+}

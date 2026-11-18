@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "type_name",
+  "category",
+  "area_built",
+  "area_garden",
+  "bedrooms",
+  "bathrooms",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_name",
+   "fieldtype": "Data",
+   "label": "Unit Type",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "description": "For example: Apartment 3 bedrooms 150 m²."
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Apartment\nVilla\nDuplex\nPenthouse\nStudio\nChalet\nOffice\nShop\nClinic\nLand\nOther",
+   "default": "Apartment",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "area_built",
+   "fieldtype": "Float",
+   "label": "Built Area (m²)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "area_garden",
+   "fieldtype": "Float",
+   "label": "Garden or Roof Area (m²)"
+  },
+  {
+   "fieldname": "bedrooms",
+   "fieldtype": "Int",
+   "label": "Bedrooms"
+  },
+  {
+   "fieldname": "bathrooms",
+   "fieldtype": "Int",
+   "label": "Bathrooms"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Unit Type",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "field:type_name",
+ "icon": "fa fa-th-large",
+ "allow_rename": 0
+}

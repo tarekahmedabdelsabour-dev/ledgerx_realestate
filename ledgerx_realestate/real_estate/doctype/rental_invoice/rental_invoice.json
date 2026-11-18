@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "period_start",
+  "amount",
+  "sales_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "period_start",
+   "fieldtype": "Date",
+   "label": "Month",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Rent",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice",
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Rental Invoice",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [],
+ "istable": 1,
+ "allow_rename": 0
+}

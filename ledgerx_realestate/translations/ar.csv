@@ -1,0 +1,499 @@
+0 switches late fees off.,القيمة 0 تلغي غرامات التأخير.
+A Unit Is Handed Over Only When Everything Due Is Paid,لا تُسلَّم الوحدة إلا بعد سداد كل المستحقات
+A liability: the deposits are held for the owners association.,التزام: الودائع محتجزة لصالح اتحاد الشاغلين.
+Accepted,مقبول
+Accounting,المحاسبة
+Accounts,الحسابات
+Activate,تفعيل
+Activate the Lease,تفعيل عقد الإيجار
+Active,نشط
+Active Contracts,العقود السارية
+Active Leases,عقود الإيجار السارية
+Add at least one installment,أضف قسطًا واحدًا على الأقل
+Added on top of the price list.,تُضاف فوق قائمة الأسعار.
+"Added to the contract, due at delivery, held for the owners association.",تُضاف إلى العقد وتُستحق عند الاستلام وتُحتجز لصالح اتحاد الشاغلين.
+Additional Salary,راتب إضافي
+Administrative,إداري
+Advance,دفعة مقدمة
+Advance - {0},دفعة مقدمة - {0}
+Advance Paid,الدفعة المقدمة المسددة
+Advance Recovered,الدفعة المقدمة المستردة
+Advance Recovered from Each Claim (%),نسبة استرداد الدفعة المقدمة من كل مستخلص (%)
+After (months from the contract),بعد (عدد الأشهر من تاريخ العقد)
+After Discount,بعد الخصم
+After Sale,بعد البيع
+Air Conditioning,تكييف
+Already invoiced,تم إصدار فاتورة بالفعل
+Amount,المبلغ
+Amount Due,المبلغ المستحق
+Apartment,شقة
+Apply to Available Units,تطبيق على الوحدات المتاحة
+Approve,اعتماد
+Approve and Post,اعتماد وترحيل
+Approved,معتمد
+Area and Rooms,المساحة والغرف
+Assigned,مُسنَد
+Assigned To,مُسنَد إلى
+Association,الاتحاد
+Association Fee Run,دورة رسوم الاتحاد
+Available,متاح
+Available Units,الوحدات المتاحة
+BOQ Item,بند المقايسة
+Bank,البنك
+Bathrooms,الحمامات
+Bedrooms,غرف النوم
+Bill of Quantities,مقايسة (BOQ)
+Billed Up To,المفوتر حتى
+Blocked,محجوبة
+Bounced,مرتجع
+Broker,وسيط (سمسار)
+Broker Commission (%),عمولة الوسيط (%)
+Broker or Company,وسيط أو شركة
+Building,مبنى (عمارة)
+Built Area (m²),مساحة المباني (م²)
+CRM Lead,عميل محتمل (CRM)
+Calculation,الحساب
+Cancel,إلغاء
+Cancel Draft,إلغاء المسودة
+Cancel the Contract,إلغاء العقد
+Cancel the Reservation,إلغاء الحجز
+Cancellation of {0},إلغاء {0}
+Cancellation penalty - {0},غرامة الإلغاء - {0}
+Cancelled,ملغي
+Category,الفئة
+Chalet,شاليه
+Charged to the Owner,محمّل على المالك
+Charges,الرسوم
+Checklist,قائمة المراجعة
+Cheque Cleared,تم تحصيل الشيك
+Cheque Date,تاريخ الشيك
+Cheque Number,رقم الشيك
+Cheques to Deposit,شيكات للإيداع
+Choose the broker,اختر الوسيط
+Choose the salesman,اختر مندوب المبيعات
+Choose who does the work,اختر من يتولى التنفيذ
+City,المدينة
+Claimed,مُستخلَص
+Claimed Before,المستخلص سابقًا
+Claimed to Date,المستخلص حتى تاريخه
+Claims,المستخلصات
+Cleared,تم التحصيل
+Clinic,عيادة
+Closed,مغلق
+Collected,محصّل
+Collected (%),نسبة التحصيل (%)
+Collection,التحصيل
+Collection Forecast,توقعات التحصيل
+Commercial,تجاري
+Commission,عمولة
+Commission (%),العمولة (%)
+Commission - contract {0},عمولة - العقد {0}
+Commission Expense Account,حساب مصروف العمولات
+Commission Is Due When the Customer Has Paid (%),تُستحق العمولة عند سداد العميل (%)
+Commissions Due,العمولات المستحقة
+Company,الشركة
+Complete the Handover,إتمام التسليم
+Completed,مكتمل
+Completion,نسبة الإنجاز
+Completion (%),نسبة الإنجاز (%)
+Completion Claimed,الإنجاز المستخلص
+Confirm the Contract,تأكيد العقد
+Construction,الإنشاءات
+Construction Contract,عقد مقاولة
+Construction Cost Account,حساب تكلفة الإنشاءات
+Construction Progress,تقدم الأعمال الإنشائية
+Contract,عقد
+Contract Date,تاريخ العقد
+Contract Installment,قسط العقد
+Contract Late Fee,غرامة تأخير العقد
+Contract Price,سعر العقد
+Contract Value,قيمة العقد
+Contract {0} - {1},العقد {0} - {1}
+Contracted,متعاقد عليها
+Contractor,مقاول
+Contractor Claims,مستخلصات المقاولين
+Contractor claims are posted here (an expense or a work-in-progress asset).,تُرحَّل مستخلصات المقاولين إلى هذا الحساب (مصروف أو أصل أعمال تحت التنفيذ).
+Contracts Value,قيمة العقود
+Contracts and Collection,العقود والتحصيل
+Contracts per Month,العقود شهريًا
+Contracts use it for the delivery payment.,تستخدمها العقود لدفعة الاستلام.
+Converted,تم التحويل
+Core and Shell,على الطوب
+Cost,التكلفة
+Cost Center,مركز التكلفة
+Create,إنشاء
+Create an invoice for the owner of every delivered unit?,هل تريد إنشاء فاتورة لمالك كل وحدة تم استلامها؟
+Create the invoice with the payment schedule and take the unit off the market?,هل تريد إنشاء الفاتورة بجدول السداد وسحب الوحدة من البيع؟
+Create the purchase invoice for this claim?,هل تريد إنشاء فاتورة الشراء لهذا المستخلص؟
+Create the purchase invoice or the additional salary?,هل تريد إنشاء فاتورة الشراء أم الراتب الإضافي؟
+"Created automatically: attach expenses, tasks and timesheets to it.",يُنشأ تلقائيًا: اربط به المصروفات والمهام وسجلات الحضور.
+Created automatically: commissions are paid through it.,يُنشأ تلقائيًا: تُسدَّد العمولات من خلاله.
+Credit Note (Cancellation),إشعار دائن (إلغاء)
+Customer,العميل
+Daily Work,الأعمال اليومية
+Date,التاريخ
+Days Late,أيام التأخير
+Default Broker Commission (%),عمولة الوسيط الافتراضية (%)
+Defaults,الإعدادات الافتراضية
+Defect,عيب
+Defects,العيوب
+Delivered,تم الاستلام
+Delivery,استلام
+Delivery Date,تاريخ الاستلام
+Deposit,وديعة
+Deposit at the Bank,إيداع في البنك
+Deposit refund - {0},رد الوديعة - {0}
+Deposited,تم الإيداع
+Description,الوصف
+Details,التفاصيل
+Discount,الخصم
+Done,تم
+Down Payment,دفعة مقدمة
+Down Payment (%),الدفعة المقدمة (%)
+"Down payment, delivery and extra payments add up to more than 100%",مجموع الدفعة المقدمة ودفعة الاستلام والدفعات الإضافية يتجاوز 100%
+Draft,مسودة
+Draft Contracts,العقود المسودة
+Due,مستحق
+Due Date,تاريخ الاستحقاق
+Due Until,مستحق حتى
+Duplex,دوبلكس
+Effective From,ساري من
+Electrical,كهرباء
+Electricity Meter,عداد الكهرباء
+Elevator,مصعد
+Email,البريد الإلكتروني
+Emergency,طارئ
+Employee,الموظف
+Empty: the whole project.,اتركه فارغًا: المشروع بالكامل.
+Empty: usable in every project.,اتركه فارغًا: يصلح لكل المشروعات.
+End,انتهاء
+End the Lease,إنهاء عقد الإيجار
+End this lease?,هل تريد إنهاء عقد الإيجار هذا؟
+Ended,منتهي
+Enter the advance amount,أدخل مبلغ الدفعة المقدمة
+Enter the amount to charge,أدخل المبلغ المراد تحميله
+Enter the built area,أدخل مساحة المباني
+Enter the cheque amount,أدخل مبلغ الشيك
+Enter the contract value,أدخل قيمة العقد
+Enter the delivery date: the delivery payment and the maintenance deposit are due then,أدخل تاريخ الاستلام: تُستحق عنده دفعة الاستلام ووديعة الصيانة
+Enter the monthly charge: per m² or a fixed amount,أدخل الرسم الشهري: للمتر المربع أو مبلغًا ثابتًا
+Enter the monthly rent,أدخل الإيجار الشهري
+Estimated Cost,التكلفة التقديرية
+Expected Collection,التحصيل المتوقع
+Expected Completion,الإنجاز المتوقع
+Expired,منتهي الصلاحية
+Extra Payment,دفعة إضافية
+Extra Payments,الدفعات الإضافية
+Extra Payments (for example yearly),الدفعات الإضافية (مثل الدفعات السنوية)
+Fee Run Line,بند دورة الرسوم
+Finished,مُنتهٍ
+Finishing,التشطيب
+First Installment After (months),القسط الأول بعد (أشهر)
+Fixed,ثابت
+Fixed Monthly Charge per Unit,رسم شهري ثابت لكل وحدة
+Floor,الدور
+"Floor, View or Corner Premium (%)",علاوة الدور أو الإطلالة أو الناصية (%)
+Floors,الأدوار
+For example 2026-12.,مثال: 2026-12.
+"For example: 10% down, 8 years quarterly, 5% at delivery.",مثال: 10% دفعة مقدمة، وأقساط ربع سنوية لمدة 8 سنوات، و5% عند الاستلام.
+For example: Apartment 3 bedrooms 150 m².,مثال: شقة 3 غرف نوم 150 م².
+From,من
+From the latest construction progress record.,من أحدث سجل لتقدم الأعمال الإنشائية.
+Fully Finished,تشطيب كامل
+Garden or Roof Area (m²),مساحة الحديقة أو السطح (م²)
+Generate the Invoices,إنشاء الفواتير
+Grace Days Before a Late Fee,أيام السماح قبل غرامة التأخير
+Hand the unit over to the owner? The warranty starts today.,هل تريد تسليم الوحدة للمالك؟ يبدأ الضمان من اليوم.
+Handover Check,فحص التسليم
+Handover Date,تاريخ التسليم
+Handover Defect,عيب التسليم
+High,مرتفع
+Holds the Unit Until,حجز الوحدة حتى
+Home,الرئيسية
+In Progress,قيد التنفيذ
+Individual,فرد
+Installment,قسط
+Installments,أقساط
+Installments Due,الأقساط المستحقة
+Invoice,فاتورة
+Invoice Date,تاريخ الفاتورة
+Invoice Due Months,أشهر استحقاق الفواتير
+Invoice Total,إجمالي الفاتورة
+Invoice the Owner,إصدار فاتورة للمالك
+Invoiced,تم إصدار فاتورة
+Invoices,الفواتير
+Item,بند
+Keys Handed Over,تم تسليم المفاتيح
+Kind,النوع
+Land,أرض
+Land Area (m²),مساحة الأرض (م²)
+Late,متأخر
+Late Fee,غرامة تأخير
+Late Fee Income Account,حساب إيراد غرامات التأخير
+Late Fee per Month (%),غرامة التأخير شهريًا (%)
+Late Fees Charged,غرامات التأخير المحتسبة
+Late fee - contract {0},غرامة تأخير - العقد {0}
+Late fee {0} - {1},غرامة تأخير {0} - {1}
+Lease {0},عقد إيجار {0}
+Leave empty to keep it as the customer's credit.,اتركه فارغًا للإبقاء عليه كرصيد دائن للعميل.
+Leave empty to keep the deposit as the customer's credit.,اتركه فارغًا للإبقاء على الوديعة كرصيد دائن للعميل.
+List Price,سعر القائمة
+Location,الموقع
+Low,منخفض
+Maintenance Deposit,وديعة الصيانة
+Maintenance Deposit (%),وديعة الصيانة (%)
+Maintenance Deposit Account,حساب وديعة الصيانة
+Maintenance Income Account,حساب إيراد الصيانة
+Maintenance Request,طلب صيانة
+Maintenance by Category,الصيانة حسب الفئة
+Maintenance deposit - {0},وديعة الصيانة - {0}
+Maintenance request {0},طلب الصيانة {0}
+Major,جسيم
+Make the Contract,إنشاء العقد
+Margin,الهامش
+Mark Completed,تحديد كمكتمل
+Mark this contract completed?,هل تريد تحديد هذا العقد كمكتمل؟
+Minor,بسيط
+Mixed Use,استخدام مختلط
+Mode of Payment,طريقة الدفع
+Mode of Payment {0} has no account for the company,طريقة الدفع {0} ليس لها حساب للشركة
+Money,نقدًا
+Month,الشهر
+Monthly Charge per m²,الرسم الشهري للمتر المربع
+Monthly Rent,الإيجار الشهري
+Months Between Installments,الأشهر بين الأقساط
+More,المزيد
+Name,الاسم
+National or Tax ID,الرقم القومي أو الضريبي
+Net Payable,صافي المستحق
+New,جديد
+New End Date,تاريخ الانتهاء الجديد
+New Monthly Rent,الإيجار الشهري الجديد
+New Progress Claim,مستخلص جديد
+Normal,عادي
+Not accepted: {0},غير مقبول: {0}
+Not charged while under warranty unless you enter it.,لا يُحتسب أثناء فترة الضمان ما لم تدخله.
+Notes,ملاحظات
+Number of Installments,عدد الأقساط
+Office,مكتب
+Only an available unit can be blocked,لا يمكن حجب إلا وحدة متاحة
+Open Contract,فتح العقد
+Open Invoice,فتح الفاتورة
+Open Maintenance,فتح الصيانة
+Other,أخرى
+Our Cost,تكلفتنا
+Overdue Amount,المبلغ المتأخر
+Owner,المالك
+Owners Association,اتحاد الشاغلين
+Paid,مدفوع
+Paid To,مدفوع إلى
+Paid at Delivery (%),المدفوع عند الاستلام (%)
+Paid through payroll. 0 switches it off.,يُصرف عبر كشف المرتبات. القيمة 0 تلغيه.
+Pay an Advance,صرف دفعة مقدمة
+Pay the Commission,سداد العمولة
+Payment Entry,قيد دفع
+Payment Plan,خطة سداد
+Payment Plan Extra,دفعة إضافية بخطة السداد
+Payment Schedule,جدول السداد
+Penalties,الغرامات
+Penalty on What the Customer Paid (%),الغرامة على ما سدده العميل (%)
+Pending,معلق
+Penthouse,بنتهاوس
+Period,الفترة
+Phase,مرحلة
+Phone,الهاتف
+Photo,صورة
+Plan,خطة
+Plan Increase,زيادة الخطة
+Plan Terms,شروط الخطة
+Planned,مخطط
+Planning,التخطيط
+Plumbing,سباكة
+Post Dated Cheque,شيك آجل
+Posted,مُرحَّل
+Price,السعر
+Price Increase (%),زيادة السعر (%)
+Price Increase for This Plan (%),زيادة السعر لهذه الخطة (%)
+Price per m²,سعر المتر المربع
+Price per m² (built),سعر المتر المربع (مباني)
+Price per m² (garden or roof),سعر المتر المربع (حديقة أو سطح)
+Prices,الأسعار
+Prices by Unit Type,الأسعار حسب نوع الوحدة
+Priority,الأولوية
+Problem,المشكلة
+Progress,التقدم
+Progress Claim,مستخلص
+Progress claim {0} - {1},مستخلص {0} - {1}
+Project,مشروع
+Project (Tasks and Costs),المشروع (المهام والتكاليف)
+Project Manager,مدير المشروع
+Project Phase,مرحلة المشروع
+Project Profitability,ربحية المشروع
+Projects,المشروعات
+Property Unit,وحدة عقارية
+Purchase Invoice,فاتورة شراء
+Put Back on Sale,إعادة الوحدة للبيع
+Quantity,الكمية
+Rate,السعر الفردي
+Real Estate,العقارات
+Real Estate Broker,وسيط عقاري
+Real Estate Project,مشروع عقاري
+Real Estate Settings,إعدادات العقارات
+Receive Payment,استلام دفعة
+Receive the Deposit,استلام الوديعة
+Received,مستلم
+Received By,استلمها
+Reference,المرجع
+Refund - contract {0},رد مبلغ - العقد {0}
+Refund the Deposit Through,رد الوديعة عن طريق
+Refund the Rest Through,رد المتبقي عن طريق
+Related,ذو صلة
+Renew,تجديد
+Rent,إيجار
+Rent Invoices,فواتير الإيجار
+Rent {0} - {1},إيجار {0} - {1}
+Rental Contract,عقد إيجار
+Rental Income Account,حساب إيراد الإيجار
+Rental Invoice,فاتورة إيجار
+Rented,مؤجرة
+Reported On,تاريخ الإبلاغ
+Reports,التقارير
+Reservation,حجز
+Reservation Holds the Unit for (days),مدة حجز الوحدة بالحجز (أيام)
+Reservation deposit - {0},عربون الحجز - {0}
+Reserve,حجز
+Reserved,محجوزة
+Reserved Units,الوحدات المحجوزة
+Residential,سكني
+Resort,منتجع
+Retention,محتجز ضمان
+Retention (%),محتجز الضمان (%)
+Retention Payable Account,حساب محتجزات الضمان المستحقة
+Retention and advance recovery leave nothing to pay,المحتجز واسترداد الدفعة المقدمة لا يتركان مبلغًا للسداد
+Return to the Customer,رد إلى العميل
+Returned,مرتجع
+Row {0}: the unit type is listed twice,الصف {0}: نوع الوحدة مكرر
+Salary Component for Salesmen Commission,مكوّن الراتب لعمولة مندوبي المبيعات
+Sale,بيع
+Sales Commission,عمولة المبيعات
+Sales Invoice,فاتورة مبيعات
+Sales Target,هدف المبيعات
+Sales Team,فريق المبيعات
+"Sales, contractor claims and expenses of the project are posted to it: that is the project's profit and loss.",تُرحَّل إليه مبيعات المشروع ومستخلصات المقاولين والمصروفات: وهو أرباح وخسائر المشروع.
+Salesman,مندوب مبيعات
+Salesman Commission (%),عمولة مندوب المبيعات (%)
+Save,حفظ
+Schedule,جدولة
+Schedule the Handover,جدولة التسليم
+Scheduled,مجدول
+Scope of Work,نطاق الأعمال
+Security Deposit,تأمين
+Security deposit - {0},تأمين - {0}
+Sell,بيع
+Selling,المبيعات
+Semi Finished,نصف تشطيب
+Series,سلسلة الترقيم
+Service Charge Income Account,حساب إيراد رسوم الخدمات
+Service charge {0} - {1},رسوم خدمات {0} - {1}
+Set the price of every available unit of the project from this list?,هل تريد تسعير كل وحدة متاحة في المشروع من هذه القائمة؟
+Set {0} in Real Estate Settings first,حدّد {0} في إعدادات العقارات أولًا
+Setup,الإعداد
+Severity,درجة الخطورة
+Share (%),الحصة (%)
+Shop,محل
+Sold,مباعة
+Spent (Expenses),المنصرف (المصروفات)
+Start,بداية
+Status,الحالة
+Still Due,لا يزال مستحقًا
+Structural,إنشائي
+Studio,استوديو
+Supplier,المورد
+Supplier (Payable Account),المورد (حساب الدائنين)
+Take Off Sale,سحب من البيع
+Target Reached (%),نسبة تحقيق الهدف (%)
+Tenant,مستأجر
+The amount must be above zero and not more than the {0} still due,يجب أن يكون المبلغ أكبر من صفر ولا يزيد عن {0} المتبقي المستحق
+The association is not active,الاتحاد غير نشط
+The bill of quantities belongs to another project,المقايسة تابعة لمشروع آخر
+The bill of quantities is {0},حالة المقايسة: {0}
+The broker has no supplier account,الوسيط ليس له حساب مورد
+The building belongs to another project,المبنى تابع لمشروع آخر
+The charges of {0} were already posted for {1},تم ترحيل رسوم {0} بالفعل عن {1}
+The cheque is {0},حالة الشيك: {0}
+The claim does not add up: {0},المستخلص غير متسق: {0}
+The claim is {0},حالة المستخلص: {0}
+The collection appears once the contract is confirmed.,يظهر التحصيل بعد تأكيد العقد.
+The commission is {0},حالة العمولة: {0}
+The completion must be above what was already claimed ({0}%),يجب أن تكون نسبة الإنجاز أعلى مما سبق استخلاصه ({0}%)
+The construction contract is {0},حالة عقد المقاولة: {0}
+The contract is not active,العقد غير ساري
+The contract is {0},حالة العقد: {0}
+The customer has not yet paid the share that makes this commission due,لم يسدد العميل بعد الحصة التي تستحق بها هذه العمولة
+The customer still owes {0} that is due: collect it before the handover,لا يزال على العميل مبلغ {0} مستحق: قم بتحصيله قبل التسليم
+The deductions are more than the claim,الاستقطاعات تزيد عن قيمة المستخلص
+The deposit is already received,تم استلام الوديعة بالفعل
+The discount is more than the price,الخصم أكبر من السعر
+The handover is {0},حالة التسليم: {0}
+The lease is {0},حالة عقد الإيجار: {0}
+The lease must end after it starts,يجب أن ينتهي عقد الإيجار بعد تاريخ بدايته
+The months between installments must be at least 1,يجب ألا تقل الأشهر بين الأقساط عن 1
+The new end date must be after the current one,يجب أن يكون تاريخ الانتهاء الجديد بعد التاريخ الحالي
+The payment plan belongs to another project,خطة السداد تابعة لمشروع آخر
+The payment plan does not add up: {0},خطة السداد غير متسقة: {0}
+The payment plan {0} is not active,خطة السداد {0} غير نشطة
+The phase belongs to another project,المرحلة تابعة لمشروع آخر
+The price of a unit that is not available cannot be changed: the contract keeps its own price,لا يمكن تغيير سعر وحدة غير متاحة: يحتفظ العقد بسعره الخاص
+The project ends before it starts,المشروع ينتهي قبل أن يبدأ
+The reservation date is in the past,تاريخ الحجز في الماضي
+The reservation is {0},حالة الحجز: {0}
+The run is {0},حالة الدورة: {0}
+The unit has no owner,الوحدة ليس لها مالك
+The unit has no price: apply a price list or enter it on the unit,الوحدة ليس لها سعر: طبّق قائمة أسعار أو أدخل السعر في الوحدة
+The unit is not available,الوحدة غير متاحة
+The unit is not blocked,الوحدة غير محجوبة
+The unit is not free to rent,الوحدة غير متاحة للإيجار
+The unit is {0},حالة الوحدة: {0}
+The unit was already handed over,تم تسليم الوحدة بالفعل
+There is no deposit to receive,لا توجد وديعة للاستلام
+This Claim,هذا المستخلص
+This contract already has a handover,هذا العقد له تسليم بالفعل
+Title,العنوان
+To,إلى
+Total,الإجمالي
+Total Budget,إجمالي الموازنة
+Total Completion to Date (%),إجمالي الإنجاز حتى تاريخه (%)
+Totals,الإجماليات
+Under Construction,تحت الإنشاء
+Under Warranty,تحت الضمان
+Unit,وحدة
+Unit Contract,عقد بيع وحدة
+Unit Handover,تسليم الوحدة
+Unit Inventory,مخزون الوحدات
+Unit Number,رقم الوحدة
+Unit Price List,قائمة أسعار الوحدات
+Unit Price Row,بند سعر الوحدة
+Unit Reservation,حجز وحدة
+Unit Sales Income Account,حساب إيراد مبيعات الوحدات
+Unit Type,نوع الوحدة
+Units,الوحدات
+Units by Project,الوحدات حسب المشروع
+Units by Status,الوحدات حسب الحالة
+VAT,ضريبة القيمة المضافة
+VAT Account,حساب ضريبة القيمة المضافة
+VAT on Unit Sales (%),ضريبة القيمة المضافة على بيع الوحدات (%)
+View,عرض
+Villa,فيلا
+Villas,فيلات
+Warranty (months),الضمان (أشهر)
+Warranty After Handover (months),الضمان بعد التسليم (أشهر)
+Warranty Ends,انتهاء الضمان
+Water Meter,عداد المياه
+What Was Done,ما تم تنفيذه
+Work Done to Date,الأعمال المنفذة حتى تاريخه
+Work Item,بند أعمال
+Work Items,بنود الأعمال
+Work to {0}% - {1},الأعمال حتى {0}% - {1}
+Yearly Increase (%),الزيادة السنوية (%)
+{0} invoices,{0} فواتير
+{0} units priced,تم تسعير {0} وحدة

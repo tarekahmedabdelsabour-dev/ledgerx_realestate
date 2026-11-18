@@ -1,0 +1,224 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "construction_contract",
+  "project",
+  "contractor",
+  "claim_date",
+  "status",
+  "cb1",
+  "cumulative_pct",
+  "penalties",
+  "notes",
+  "sb_calc",
+  "contract_value",
+  "cumulative_value",
+  "previous_gross",
+  "cb2",
+  "gross",
+  "retention",
+  "advance_recovery",
+  "net",
+  "sb_acc",
+  "purchase_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PCL-.YYYY.-.#####",
+   "default": "PCL-.YYYY.-.#####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "construction_contract",
+   "fieldtype": "Link",
+   "label": "Construction Contract",
+   "options": "Construction Contract",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Real Estate Project",
+   "fetch_from": "construction_contract.project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier",
+   "fetch_from": "construction_contract.contractor",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "claim_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nApproved\nCancelled",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cumulative_pct",
+   "fieldtype": "Percent",
+   "label": "Total Completion to Date (%)",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "penalties",
+   "fieldtype": "Currency",
+   "label": "Penalties"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "sb_calc",
+   "fieldtype": "Section Break",
+   "label": "Calculation"
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Currency",
+   "label": "Contract Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cumulative_value",
+   "fieldtype": "Currency",
+   "label": "Work Done to Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_gross",
+   "fieldtype": "Currency",
+   "label": "Claimed Before",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross",
+   "fieldtype": "Currency",
+   "label": "This Claim",
+   "read_only": 1
+  },
+  {
+   "fieldname": "retention",
+   "fieldtype": "Currency",
+   "label": "Retention",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_recovery",
+   "fieldtype": "Currency",
+   "label": "Advance Recovered",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net",
+   "fieldtype": "Currency",
+   "label": "Net Payable",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_acc",
+   "fieldtype": "Section Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Purchase Invoice",
+   "options": "Purchase Invoice",
+   "read_only": 1,
+   "no_copy": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Progress Claim",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "icon": "fa fa-file-text-o",
+ "allow_rename": 0
+}

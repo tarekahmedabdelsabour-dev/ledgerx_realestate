@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "unit",
+  "customer",
+  "status",
+  "valid_until",
+  "cb1",
+  "deposit",
+  "deposit_entry",
+  "broker",
+  "salesman",
+  "crm_lead",
+  "contract",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "RES-.YYYY.-.#####",
+   "default": "RES-.YYYY.-.#####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Property Unit",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nConverted\nCancelled\nExpired",
+   "default": "Active",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "valid_until",
+   "fieldtype": "Date",
+   "label": "Holds the Unit Until",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deposit",
+   "fieldtype": "Currency",
+   "label": "Deposit",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "deposit_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "broker",
+   "fieldtype": "Link",
+   "label": "Broker",
+   "options": "Real Estate Broker"
+  },
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Data",
+   "label": "CRM Lead"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Unit Contract",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Unit Reservation",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "icon": "fa fa-bookmark",
+ "allow_rename": 0
+}

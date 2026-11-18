@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "project",
+  "contractor",
+  "status",
+  "boq",
+  "cb1",
+  "contract_value",
+  "retention_pct",
+  "advance_pct",
+  "start_date",
+  "end_date",
+  "sb_prog",
+  "advance_paid",
+  "claimed_gross",
+  "last_pct",
+  "scope"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "CC-.YYYY.-.####",
+   "default": "CC-.YYYY.-.####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Real Estate Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nCompleted\nCancelled",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "boq",
+   "fieldtype": "Link",
+   "label": "Bill of Quantities",
+   "options": "Bill of Quantities"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Currency",
+   "label": "Contract Value",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "retention_pct",
+   "fieldtype": "Percent",
+   "label": "Retention (%)",
+   "default": 5
+  },
+  {
+   "fieldname": "advance_pct",
+   "fieldtype": "Percent",
+   "label": "Advance Recovered from Each Claim (%)",
+   "default": 0
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End"
+  },
+  {
+   "fieldname": "sb_prog",
+   "fieldtype": "Section Break",
+   "label": "Progress"
+  },
+  {
+   "fieldname": "advance_paid",
+   "fieldtype": "Currency",
+   "label": "Advance Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claimed_gross",
+   "fieldtype": "Currency",
+   "label": "Claimed to Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_pct",
+   "fieldtype": "Percent",
+   "label": "Completion Claimed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Small Text",
+   "label": "Scope of Work"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Construction Contract",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "title_field": "title",
+ "icon": "fa fa-wrench",
+ "allow_rename": 0
+}

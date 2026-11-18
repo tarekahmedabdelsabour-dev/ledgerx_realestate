@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "building_name",
+  "project",
+  "phase",
+  "floors",
+  "status",
+  "progress_pct"
+ ],
+ "fields": [
+  {
+   "fieldname": "building_name",
+   "fieldtype": "Data",
+   "label": "Building",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Real Estate Project",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "phase",
+   "fieldtype": "Link",
+   "label": "Phase",
+   "options": "Project Phase"
+  },
+  {
+   "fieldname": "floors",
+   "fieldtype": "Int",
+   "label": "Floors"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planned\nUnder Construction\nFinished",
+   "default": "Planned"
+  },
+  {
+   "fieldname": "progress_pct",
+   "fieldtype": "Percent",
+   "label": "Completion",
+   "read_only": 1,
+   "description": "From the latest construction progress record."
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Building",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "format:{project}-{building_name}",
+ "title_field": "building_name",
+ "icon": "fa fa-building-o",
+ "allow_rename": 0
+}

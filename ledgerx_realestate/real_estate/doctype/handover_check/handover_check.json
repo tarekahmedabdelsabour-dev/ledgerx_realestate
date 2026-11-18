@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "ok",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Data",
+   "label": "Item",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "ok",
+   "fieldtype": "Check",
+   "label": "Accepted",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "label": "Notes",
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Handover Check",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [],
+ "istable": 1,
+ "allow_rename": 0
+}

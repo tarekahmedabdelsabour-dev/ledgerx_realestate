@@ -1,0 +1,367 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "unit",
+  "customer",
+  "status",
+  "contract_date",
+  "project",
+  "cb1",
+  "reservation",
+  "salesman",
+  "broker",
+  "commission_pct",
+  "sb_price",
+  "list_price",
+  "discount",
+  "cb2",
+  "payment_plan",
+  "delivery_date",
+  "sb_plan",
+  "down_payment_pct",
+  "delivery_pct",
+  "markup_pct",
+  "deposit_pct",
+  "cb3",
+  "installments",
+  "interval_months",
+  "first_after_months",
+  "extras",
+  "sb_tot",
+  "net",
+  "markup",
+  "price",
+  "cb4",
+  "deposit",
+  "vat",
+  "total",
+  "sb_sched",
+  "schedule",
+  "schedule_html",
+  "sb_acc",
+  "sales_invoice",
+  "return_invoice",
+  "cb5",
+  "late_fees"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "CON-.YYYY.-.#####",
+   "default": "CON-.YYYY.-.#####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Property Unit",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nDelivered\nCancelled",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "contract_date",
+   "fieldtype": "Date",
+   "label": "Contract Date",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Real Estate Project",
+   "fetch_from": "unit.project",
+   "read_only": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reservation",
+   "fieldtype": "Link",
+   "label": "Reservation",
+   "options": "Unit Reservation"
+  },
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "broker",
+   "fieldtype": "Link",
+   "label": "Broker",
+   "options": "Real Estate Broker"
+  },
+  {
+   "fieldname": "commission_pct",
+   "fieldtype": "Percent",
+   "label": "Broker Commission (%)"
+  },
+  {
+   "fieldname": "sb_price",
+   "fieldtype": "Section Break",
+   "label": "Price"
+  },
+  {
+   "fieldname": "list_price",
+   "fieldtype": "Currency",
+   "label": "List Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_plan",
+   "fieldtype": "Link",
+   "label": "Payment Plan",
+   "options": "Payment Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "sb_plan",
+   "fieldtype": "Section Break",
+   "label": "Plan Terms"
+  },
+  {
+   "fieldname": "down_payment_pct",
+   "fieldtype": "Percent",
+   "label": "Down Payment (%)"
+  },
+  {
+   "fieldname": "delivery_pct",
+   "fieldtype": "Percent",
+   "label": "Paid at Delivery (%)"
+  },
+  {
+   "fieldname": "markup_pct",
+   "fieldtype": "Percent",
+   "label": "Price Increase (%)"
+  },
+  {
+   "fieldname": "deposit_pct",
+   "fieldtype": "Percent",
+   "label": "Maintenance Deposit (%)"
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "installments",
+   "fieldtype": "Int",
+   "label": "Number of Installments"
+  },
+  {
+   "fieldname": "interval_months",
+   "fieldtype": "Int",
+   "label": "Months Between Installments"
+  },
+  {
+   "fieldname": "first_after_months",
+   "fieldtype": "Int",
+   "label": "First Installment After (months)"
+  },
+  {
+   "fieldname": "extras",
+   "fieldtype": "Table",
+   "label": "Extra Payments",
+   "options": "Payment Plan Extra"
+  },
+  {
+   "fieldname": "sb_tot",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "net",
+   "fieldtype": "Currency",
+   "label": "After Discount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "markup",
+   "fieldtype": "Currency",
+   "label": "Plan Increase",
+   "read_only": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Contract Price",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deposit",
+   "fieldtype": "Currency",
+   "label": "Maintenance Deposit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vat",
+   "fieldtype": "Currency",
+   "label": "VAT",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Invoice Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_sched",
+   "fieldtype": "Section Break",
+   "label": "Payment Schedule"
+  },
+  {
+   "fieldname": "schedule",
+   "fieldtype": "Table",
+   "label": "Schedule",
+   "options": "Contract Installment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "schedule_html",
+   "fieldtype": "HTML",
+   "label": "Collection"
+  },
+  {
+   "fieldname": "sb_acc",
+   "fieldtype": "Section Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "return_invoice",
+   "fieldtype": "Link",
+   "label": "Credit Note (Cancellation)",
+   "options": "Sales Invoice",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "cb5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "late_fees",
+   "fieldtype": "Table",
+   "label": "Late Fees Charged",
+   "options": "Contract Late Fee",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Unit Contract",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "title_field": "customer",
+ "icon": "fa fa-file-text",
+ "search_fields": "customer,unit",
+ "allow_rename": 0
+}

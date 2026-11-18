@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "unit",
+  "tenant",
+  "status",
+  "cb1",
+  "start_date",
+  "end_date",
+  "monthly_rent",
+  "annual_increase_pct",
+  "sb_dep",
+  "security_deposit",
+  "deposit_entry",
+  "cb2",
+  "last_billed",
+  "sb_inv",
+  "invoices"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "RNT-.YYYY.-.####",
+   "default": "RNT-.YYYY.-.####",
+   "hidden": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Property Unit",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nEnded\nCancelled",
+   "default": "Draft",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "monthly_rent",
+   "fieldtype": "Currency",
+   "label": "Monthly Rent",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "annual_increase_pct",
+   "fieldtype": "Percent",
+   "label": "Yearly Increase (%)"
+  },
+  {
+   "fieldname": "sb_dep",
+   "fieldtype": "Section Break",
+   "label": "Security Deposit"
+  },
+  {
+   "fieldname": "security_deposit",
+   "fieldtype": "Currency",
+   "label": "Security Deposit"
+  },
+  {
+   "fieldname": "deposit_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_billed",
+   "fieldtype": "Date",
+   "label": "Billed Up To",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_inv",
+   "fieldtype": "Section Break",
+   "label": "Rent Invoices"
+  },
+  {
+   "fieldname": "invoices",
+   "fieldtype": "Table",
+   "label": "Invoices",
+   "options": "Rental Invoice",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Rental Contract",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "Real Estate Engineer",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "naming_series:",
+ "title_field": "tenant",
+ "icon": "fa fa-key",
+ "allow_rename": 0
+}

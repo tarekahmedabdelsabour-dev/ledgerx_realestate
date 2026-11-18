@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_name",
+  "project",
+  "active",
+  "cb1",
+  "down_payment_pct",
+  "delivery_pct",
+  "markup_pct",
+  "sb_inst",
+  "installments",
+  "interval_months",
+  "first_after_months",
+  "cb2",
+  "maintenance_deposit_pct",
+  "sb_ext",
+  "extras"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "label": "Plan",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "description": "For example: 10% down, 8 years quarterly, 5% at delivery."
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Real Estate Project",
+   "description": "Empty: usable in every project."
+  },
+  {
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "down_payment_pct",
+   "fieldtype": "Percent",
+   "label": "Down Payment (%)",
+   "default": 10,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "delivery_pct",
+   "fieldtype": "Percent",
+   "label": "Paid at Delivery (%)",
+   "default": 0
+  },
+  {
+   "fieldname": "markup_pct",
+   "fieldtype": "Percent",
+   "label": "Price Increase for This Plan (%)",
+   "default": 0,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_inst",
+   "fieldtype": "Section Break",
+   "label": "Installments"
+  },
+  {
+   "fieldname": "installments",
+   "fieldtype": "Int",
+   "label": "Number of Installments",
+   "default": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "interval_months",
+   "fieldtype": "Int",
+   "label": "Months Between Installments",
+   "default": 3,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "first_after_months",
+   "fieldtype": "Int",
+   "label": "First Installment After (months)",
+   "default": 3
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_deposit_pct",
+   "fieldtype": "Percent",
+   "label": "Maintenance Deposit (%)",
+   "default": 0,
+   "description": "Added to the contract, due at delivery, held for the owners association."
+  },
+  {
+   "fieldname": "sb_ext",
+   "fieldtype": "Section Break",
+   "label": "Extra Payments"
+  },
+  {
+   "fieldname": "extras",
+   "fieldtype": "Table",
+   "label": "Extra Payments (for example yearly)",
+   "options": "Payment Plan Extra"
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Payment Plan",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "field:plan_name",
+ "icon": "fa fa-calendar",
+ "allow_rename": 0
+}

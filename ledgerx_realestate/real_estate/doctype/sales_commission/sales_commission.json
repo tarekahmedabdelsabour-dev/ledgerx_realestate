@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "creation": "2026-11-17 20:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "party_type",
+  "broker",
+  "employee",
+  "status",
+  "cb1",
+  "base_amount",
+  "pct",
+  "amount",
+  "purchase_invoice",
+  "additional_salary"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Unit Contract",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Paid To",
+   "options": "Broker\nEmployee",
+   "default": "Broker",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "broker",
+   "fieldtype": "Link",
+   "label": "Broker",
+   "options": "Real Estate Broker",
+   "depends_on": "eval:doc.party_type=='Broker'"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Employee",
+   "depends_on": "eval:doc.party_type=='Employee'"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nDue\nInvoiced\nCancelled",
+   "default": "Pending",
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_amount",
+   "fieldtype": "Currency",
+   "label": "Contract Price"
+  },
+  {
+   "fieldname": "pct",
+   "fieldtype": "Percent",
+   "label": "Commission (%)"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Commission",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Purchase Invoice",
+   "options": "Purchase Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "additional_salary",
+   "fieldtype": "Link",
+   "label": "Additional Salary",
+   "options": "Additional Salary",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-17 20:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Sales Commission",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Real Estate Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Accountant",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Real Estate Sales",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "print": 1,
+   "export": 1
+  }
+ ],
+ "autoname": "hash",
+ "icon": "fa fa-percent",
+ "allow_rename": 0
+}
