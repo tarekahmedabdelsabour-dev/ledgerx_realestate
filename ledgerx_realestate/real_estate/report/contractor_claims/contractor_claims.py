@@ -20,7 +20,7 @@ def execute(filters=None):
 		{"label": _("Contract Value"), "fieldname": "contract_value", "fieldtype": "Currency", "width": 130},
 		{"label": _("Completion (%)"), "fieldname": "pct", "fieldtype": "Percent", "width": 110},
 	]
-	rows = frappe.get_all("Progress Claim", filters=f, fields=["contractor", "project", "construction_contract", "count(name) as claims", "sum(gross) as gross", "sum(retention) as retention",
-		"sum(advance_recovery) as advance_recovery", "sum(net) as net", "max(contract_value) as contract_value", "max(cumulative_pct) as pct"],
+	rows = frappe.get_all("Progress Claim", filters=f, fields=["contractor", "project", "construction_contract", {"COUNT": "name", "as": "claims"}, {"SUM": "gross", "as": "gross"}, {"SUM": "retention", "as": "retention"},
+		{"SUM": "advance_recovery", "as": "advance_recovery"}, {"SUM": "net", "as": "net"}, {"MAX": "contract_value", "as": "contract_value"}, {"MAX": "cumulative_pct", "as": "pct"}],
 		group_by="contractor, project, construction_contract", order_by="contractor")
 	return cols, rows
