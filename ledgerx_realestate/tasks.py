@@ -18,16 +18,26 @@ def daily():
 def expire_reservations():
 	"""A reservation past its date frees the unit. The deposit stays as the customer's credit."""
 	for r in frappe.get_all("Unit Reservation", filters={"status": "Active", "valid_until": ["<", nowdate()]}, pluck="name"):
-		frappe.get_doc("Unit Reservation", r)._free("Expired")
+		try:
+			frappe.get_doc("Unit Reservation", r)._free("Expired")
+			frappe.db.commit()
+		except Exception:
+			frappe.db.rollback()
+			frappe.log_error(title=f"Reservation expiry failed for {r}")
 
 
 def due_commissions():
 	"""A commission becomes due once the customer has paid the share set in the settings."""
 	pct = flt(accounting.settings().commission_due_pct)
 	for c in frappe.get_all("Sales Commission", filters={"status": "Pending"}, fields=["name", "contract"]):
-		inv = frappe.db.get_value("Unit Contract", c.contract, "sales_invoice")
-		if inv and logic.commission_due(accounting.collected_pct(inv), 100, pct):
-			frappe.db.set_value("Sales Commission", c.name, "status", "Due")
+		try:
+			inv = frappe.db.get_value("Unit Contract", c.contract, "sales_invoice")
+			if inv and logic.commission_due(accounting.collected_pct(inv), 100, pct):
+				frappe.db.set_value("Sales Commission", c.name, "status", "Due")
+				frappe.db.commit()
+		except Exception:
+			frappe.db.rollback()
+			frappe.log_error(title=f"Commission due check failed for {c.name}")
 
 
 def bill_rentals():
@@ -43,9 +53,14 @@ def bill_rentals():
 def end_leases():
 	"""A lease past its end date is billed to its end and closed, and the unit is freed."""
 	for r in frappe.get_all("Rental Contract", filters={"status": "Active", "end_date": ["<", nowdate()]}, pluck="name"):
-		d = frappe.get_doc("Rental Contract", r)
-		d.bill_due()
-		d.end_lease()
+		try:
+			d = frappe.get_doc("Rental Contract", r)
+			d.bill_due()
+			d.end_lease()
+			frappe.db.commit()
+		except Exception:
+			frappe.db.rollback()
+			frappe.log_error(title=f"Lease end failed for {r}")
 
 
 def charge_late_fees():

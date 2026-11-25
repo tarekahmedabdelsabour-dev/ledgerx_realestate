@@ -25,6 +25,10 @@ class UnitContract(Document):
 		t = logic.contract_totals(self.list_price, self.discount, self.markup_pct, s.vat_rate, self.deposit_pct)
 		self.net, self.markup, self.price, self.deposit, self.vat, self.total = t["net"], t["markup"], t["price"], t["deposit"], t["vat"], t["total"]
 		self._schedule()
+		if flt(self.commission_pct) < 0 or flt(self.commission_pct) > 100:
+			frappe.throw(_("The commission must be between 0 and 100 percent"))
+		if flt(self.discount) < 0:
+			frappe.throw(_("The discount cannot be negative"))
 		if self.broker and not flt(self.commission_pct):
 			self.commission_pct = frappe.db.get_value("Real Estate Broker", self.broker, "commission_pct") or s.commission_pct
 
