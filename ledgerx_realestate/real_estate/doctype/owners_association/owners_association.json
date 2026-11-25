@@ -114,5 +114,6 @@
  ],
  "autoname": "field:association_name",
  "icon": "fa fa-users",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

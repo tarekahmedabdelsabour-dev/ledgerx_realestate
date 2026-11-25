@@ -220,5 +220,6 @@
  ],
  "autoname": "naming_series:",
  "icon": "fa fa-file-text-o",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

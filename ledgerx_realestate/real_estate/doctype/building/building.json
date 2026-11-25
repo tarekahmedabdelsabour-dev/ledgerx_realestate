@@ -109,5 +109,6 @@
  "autoname": "format:{project}-{building_name}",
  "title_field": "building_name",
  "icon": "fa fa-building-o",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

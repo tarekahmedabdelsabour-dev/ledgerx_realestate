@@ -169,5 +169,6 @@
  "autoname": "field:project_name",
  "title_field": "project_name",
  "icon": "fa fa-building",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

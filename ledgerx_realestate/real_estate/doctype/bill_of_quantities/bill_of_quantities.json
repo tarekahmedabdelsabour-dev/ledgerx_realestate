@@ -132,5 +132,6 @@
  "autoname": "hash",
  "title_field": "title",
  "icon": "fa fa-list-ol",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

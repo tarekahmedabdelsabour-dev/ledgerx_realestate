@@ -104,5 +104,6 @@
  "autoname": "format:{project}-{title}",
  "title_field": "title",
  "icon": "fa fa-tags",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

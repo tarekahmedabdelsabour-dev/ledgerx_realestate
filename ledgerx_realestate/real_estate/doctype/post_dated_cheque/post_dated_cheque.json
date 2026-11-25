@@ -138,5 +138,6 @@
  "autoname": "hash",
  "title_field": "cheque_number",
  "icon": "fa fa-money",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }

@@ -102,5 +102,6 @@
  "autoname": "format:{project}-{phase_name}",
  "title_field": "phase_name",
  "icon": "fa fa-flag",
- "allow_rename": 0
+ "allow_rename": 0,
+ "track_changes": 1
 }
