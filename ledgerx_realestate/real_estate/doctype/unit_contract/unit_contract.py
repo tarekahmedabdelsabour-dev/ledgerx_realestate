@@ -63,9 +63,10 @@ class UnitContract(Document):
 		if self.status not in statuses:
 			frappe.throw(_("The contract is {0}").format(_(self.status)))
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def confirm(self):
 		"""One invoice for the whole contract with the payment schedule on it. The reservation deposit and any earlier payment are applied."""
+		self.check_permission("write")
 		self._need("Draft")
 		s = accounting.settings()
 		cc = accounting.cost_center_of(self.project)
@@ -91,8 +92,9 @@ class UnitContract(Document):
 			frappe.get_doc({"doctype": "Sales Commission", "contract": self.name, "party_type": "Employee", "employee": self.salesman, "base_amount": self.price,
 				"pct": s.salesman_commission_pct, "amount": logic.commission(self.price, s.salesman_commission_pct)}).insert(ignore_permissions=True)
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def receive_payment(self, mode_of_payment, amount, reference=None):
+		self.check_permission("write")
 		self._need("Active", "Delivered")
 		out = flt(frappe.db.get_value("Sales Invoice", self.sales_invoice, "outstanding_amount"))
 		amount = flt(amount)
@@ -101,11 +103,15 @@ class UnitContract(Document):
 		return accounting.payment(self.customer, amount, accounting.money_account(mode_of_payment), self.sales_invoice,
 			_("Contract {0} - {1}").format(self.name, self.unit), reference=reference)
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def cancel_contract(self, penalty_pct=0, refund_mode=None):
 		"""Cancel an active contract: a credit note for the invoice, a penalty invoice on what the customer paid, and (with a mode of payment) the rest refunded.
 		The unit goes back on sale."""
+		self.check_permission("write")
 		self._need("Active")
+		penalty_pct = flt(penalty_pct)
+		if penalty_pct < 0 or penalty_pct > 100:
+			frappe.throw(_("The penalty must be between 0 and 100 percent"))
 		if frappe.db.exists("Unit Handover", {"contract": self.name, "status": "Completed"}):
 			frappe.throw(_("The unit was already handed over"))
 		from erpnext.controllers.sales_and_purchase_return import make_return_doc

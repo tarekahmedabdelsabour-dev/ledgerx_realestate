@@ -27,9 +27,10 @@ class ProgressClaim(Document):
 		if self.net < 0:
 			frappe.throw(_("The deductions are more than the claim"))
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def approve(self):
 		"""Posts the claim as a purchase invoice to the contractor: retention and penalties are deducted, the advance is set against it."""
+		self.check_permission("write")
 		if self.status != "Draft":
 			frappe.throw(_("The claim is {0}").format(_(self.status)))
 		s = accounting.settings()
@@ -64,8 +65,9 @@ class ProgressClaim(Document):
 			{"claimed_gross": flt(self.previous_gross) + flt(self.gross), "last_pct": self.cumulative_pct})
 		return inv.name
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def cancel_draft(self):
+		self.check_permission("write")
 		if self.status != "Draft":
 			frappe.throw(_("The claim is {0}").format(_(self.status)))
 		self.db_set("status", "Cancelled")

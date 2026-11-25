@@ -13,9 +13,10 @@ class UnitPriceList(Document):
 				frappe.throw(_("Row {0}: the unit type is listed twice").format(r.idx))
 			seen.add(r.unit_type)
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def apply(self):
 		"""Set the price of every available unit of the project: built area x price + garden area x price, plus the unit's own premium."""
+		self.check_permission("write")
 		by = {r.unit_type: r for r in self.rows}
 		n = 0
 		for u in frappe.get_all("Property Unit", filters={"project": self.project, "status": "Available", "unit_type": ["in", list(by)]},

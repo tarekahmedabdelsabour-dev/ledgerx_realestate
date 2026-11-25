@@ -15,9 +15,10 @@ class SalesCommission(Document):
 		if self.status in ("Pending", "Due"):
 			self.amount = logic.commission(self.base_amount, self.pct) if self.base_amount and self.pct else self.amount
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def pay(self):
 		"""A broker is invoiced through his supplier account (a purchase invoice to pay); a salesman goes to payroll as an additional salary."""
+		self.check_permission("write")
 		if self.status not in ("Pending", "Due"):
 			frappe.throw(_("The commission is {0}").format(_(self.status)))
 		if self.status == "Pending" and not frappe.flags.in_test:

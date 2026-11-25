@@ -19,9 +19,10 @@ class UnitReservation(Document):
 	def after_insert(self):
 		frappe.db.set_value("Property Unit", self.unit, "status", "Reserved")
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def receive_deposit(self, mode_of_payment, amount, reference=None):
 		"""The deposit stays as the customer's advance: the contract invoice uses it."""
+		self.check_permission("write")
 		if self.status != "Active":
 			frappe.throw(_("The reservation is {0}").format(_(self.status)))
 		if self.deposit_entry:
@@ -36,9 +37,10 @@ class UnitReservation(Document):
 		if frappe.db.get_value("Property Unit", self.unit, "status") == "Reserved":
 			frappe.db.set_value("Property Unit", self.unit, "status", "Available")
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def cancel_reservation(self, refund_mode=None):
 		"""Frees the unit. With a mode of payment the deposit is given back; without, it stays as the customer's credit."""
+		self.check_permission("write")
 		if self.status != "Active":
 			frappe.throw(_("The reservation is {0}").format(_(self.status)))
 		if refund_mode and self.deposit_entry:

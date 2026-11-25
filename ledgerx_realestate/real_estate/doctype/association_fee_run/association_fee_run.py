@@ -10,9 +10,10 @@ class AssociationFeeRun(Document):
 		if self.is_new() and frappe.db.exists("Association Fee Run", {"association": self.association, "period": self.period, "status": "Posted"}):
 			frappe.throw(_("The charges of {0} were already posted for {1}").format(self.association, self.period))
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def generate(self):
 		"""One invoice to the owner of every delivered unit of the association."""
+		self.check_permission("write")
 		if self.status != "Draft":
 			frappe.throw(_("The run is {0}").format(_(self.status)))
 		a = frappe.get_doc("Owners Association", self.association)

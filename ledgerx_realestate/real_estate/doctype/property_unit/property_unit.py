@@ -16,9 +16,10 @@ class PropertyUnit(Document):
 			if before and before.list_price != self.list_price and self.status not in ("Available", "Blocked"):
 				frappe.throw(_("The price of a unit that is not available cannot be changed: the contract keeps its own price"))
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def set_blocked(self, blocked):
 		"""Take a unit off sale (or put it back) without a contract."""
+		self.check_permission("write")
 		blocked = int(blocked)
 		if blocked and self.status != "Available":
 			frappe.throw(_("Only an available unit can be blocked"))

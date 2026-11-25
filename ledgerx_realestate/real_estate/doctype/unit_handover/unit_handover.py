@@ -24,9 +24,10 @@ class UnitHandover(Document):
 		if not self.warranty_months:
 			self.warranty_months = accounting.settings().warranty_months
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def complete(self):
 		"""Hands the unit over: it becomes delivered, the warranty starts, and (by default) everything due must have been paid."""
+		self.check_permission("write")
 		if self.status != "Scheduled":
 			frappe.throw(_("The handover is {0}").format(_(self.status)))
 		c = frappe.get_doc("Unit Contract", self.contract)
@@ -43,8 +44,9 @@ class UnitHandover(Document):
 		frappe.db.set_value("Property Unit", c.unit, {"status": "Delivered", "warranty_end": end, "owner_customer": c.customer})
 		c.db_set("status", "Delivered")
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def cancel_handover(self):
+		self.check_permission("write")
 		if self.status != "Scheduled":
 			frappe.throw(_("The handover is {0}").format(_(self.status)))
 		self.db_set("status", "Cancelled")

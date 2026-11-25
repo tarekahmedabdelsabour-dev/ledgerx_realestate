@@ -15,9 +15,10 @@ class MaintenanceRequest(Document):
 		if self.status in ("Assigned", "In Progress") and not (self.assigned_employee or self.assigned_supplier):
 			frappe.throw(_("Choose who does the work"))
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def invoice_owner(self):
 		"""Bills the owner for work that is not covered by the warranty (or for the amount entered)."""
+		self.check_permission("write")
 		if flt(self.charge) <= 0:
 			frappe.throw(_("Enter the amount to charge"))
 		if self.sales_invoice:

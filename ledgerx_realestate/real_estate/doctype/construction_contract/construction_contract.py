@@ -15,21 +15,24 @@ class ConstructionContract(Document):
 		if self.boq and frappe.db.get_value("Bill of Quantities", self.boq, "project") != self.project:
 			frappe.throw(_("The bill of quantities belongs to another project"))
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def activate(self):
+		self.check_permission("write")
 		if self.status != "Draft":
 			frappe.throw(_("The contract is {0}").format(_(self.status)))
 		self.db_set("status", "Active")
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def complete(self):
+		self.check_permission("write")
 		if self.status != "Active":
 			frappe.throw(_("The contract is {0}").format(_(self.status)))
 		self.db_set("status", "Completed")
 
-	@frappe.whitelist()
+	@frappe.whitelist(methods=["POST"])
 	def pay_advance(self, mode_of_payment, amount):
 		"""An advance to the contractor: recovered from his next claims by the percentage set on the contract."""
+		self.check_permission("write")
 		if self.status != "Active":
 			frappe.throw(_("The contract is {0}").format(_(self.status)))
 		amount = flt(amount)
