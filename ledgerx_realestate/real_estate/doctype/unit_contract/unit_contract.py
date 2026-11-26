@@ -65,6 +65,10 @@ class UnitContract(Document):
 		for d, a, l in rows:
 			self.append("schedule", {"due_date": d, "amount": a, "label": _(l)})
 
+	def on_trash(self):
+		if self.sales_invoice or self.status not in ("Draft", "Cancelled"):
+			frappe.throw(_("An invoiced contract cannot be deleted. Cancel it, which issues a credit note."))
+
 	def _need(self, *statuses):
 		shared.need_status(self, *statuses, message=_("The contract is {0}"))
 
@@ -136,4 +140,18 @@ class UnitContract(Document):
 		frappe.db.set_value("Property Unit", self.unit, {"status": "Available", "contract": None, "owner_customer": None})
 		for c in frappe.get_all("Sales Commission", filters={"contract": self.name, "status": ["in", ["Pending", "Due"]]}, pluck="name"):
 			frappe.db.set_value("Sales Commission", c, "status", "Cancelled")
+		# a commission already invoiced is corrected with a debit note on its purchase invoice (a salesman's goes through payroll by hand)
+		manual = []
+		for c in frappe.get_all("Sales Commission", filters={"contract": self.name, "status": "Invoiced"}, fields=["name", "purchase_invoice"]):
+			if c.purchase_invoice and frappe.db.get_value("Purchase Invoice", c.purchase_invoice, "docstatus") == 1:
+				from erpnext.controllers.sales_and_purchase_return import make_return_doc as _return
+
+				note = _return("Purchase Invoice", c.purchase_invoice)
+				note.insert(ignore_permissions=True)
+				note.submit()
+				frappe.db.set_value("Sales Commission", c.name, "status", "Cancelled")
+			else:
+				manual.append(c.name)
+		if manual:
+			frappe.msgprint(_("These commissions were already paid out and need a manual correction: {0}").format(", ".join(manual)), indicator="orange")
 		return ret.name
