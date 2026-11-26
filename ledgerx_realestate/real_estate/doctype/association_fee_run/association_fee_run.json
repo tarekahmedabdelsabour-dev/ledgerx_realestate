@@ -135,6 +135,6 @@
  ],
  "autoname": "naming_series:",
  "icon": "fa fa-calculator",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

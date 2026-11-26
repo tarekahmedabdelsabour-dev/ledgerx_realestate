@@ -428,7 +428,7 @@ doctype("Unit Handover", [
 ], autoname="naming_series:", icon="fa fa-key", perms=perms((MGR, "all"), (ENG, "all"), (SAL, "rw"), (ACC, "r")))
 DT["Unit Handover"]["fields"].insert(0, f("naming_series", "Select", "Series", options="HND-.YYYY.-.#####", default="HND-.YYYY.-.#####", hidden=1))
 
-doctype("Maintenance Request", [
+doctype("Property Maintenance Request", [
 	f("unit", "Link", "Unit", options="Property Unit", reqd=1, in_list_view=1),
 	f("customer", "Link", "Customer", options="Customer", in_list_view=1),
 	f("category", "Select", "Category", options="Plumbing\nElectrical\nFinishing\nAir Conditioning\nStructural\nElevator\nOther", default="Other", reqd=1, in_list_view=1),
@@ -447,7 +447,7 @@ doctype("Maintenance Request", [
 	f("charge", "Currency", "Charged to the Owner", description="Not charged while under warranty unless you enter it."),
 	f("sales_invoice", "Link", "Invoice", options="Sales Invoice", read_only=1),
 ], autoname="naming_series:", icon="fa fa-wrench", perms=BUILD())
-DT["Maintenance Request"]["fields"].insert(0, f("naming_series", "Select", "Series", options="MNT-.YYYY.-.#####", default="MNT-.YYYY.-.#####", hidden=1))
+DT["Property Maintenance Request"]["fields"].insert(0, f("naming_series", "Select", "Series", options="MNT-.YYYY.-.#####", default="MNT-.YYYY.-.#####", hidden=1))
 
 doctype("Owners Association", [
 	f("association_name", "Data", "Association", reqd=1, unique=1, in_list_view=1),
@@ -486,7 +486,7 @@ doctype("Rental Invoice", [
 	f("sales_invoice", "Link", "Invoice", options="Sales Invoice", in_list_view=1),
 ], istable=1)
 
-doctype("Rental Contract", [
+doctype("Property Rental Contract", [
 	f("unit", "Link", "Unit", options="Property Unit", reqd=1, in_list_view=1),
 	f("tenant", "Link", "Tenant", options="Customer", reqd=1, in_list_view=1),
 	f("status", "Select", "Status", options="Draft\nActive\nEnded\nCancelled", default="Draft", read_only=1, in_list_view=1, in_standard_filter=1),
@@ -503,7 +503,7 @@ doctype("Rental Contract", [
 	sec("sb_inv", "Rent Invoices"),
 	f("invoices", "Table", "Invoices", options="Rental Invoice", read_only=1),
 ], autoname="naming_series:", title_field="tenant", icon="fa fa-key", perms=SALES())
-DT["Rental Contract"]["fields"].insert(0, f("naming_series", "Select", "Series", options="RNT-.YYYY.-.####", default="RNT-.YYYY.-.####", hidden=1))
+DT["Property Rental Contract"]["fields"].insert(0, f("naming_series", "Select", "Series", options="RNT-.YYYY.-.####", default="RNT-.YYYY.-.####", hidden=1))
 
 def build():
 	os.makedirs(ROOT, exist_ok=True)

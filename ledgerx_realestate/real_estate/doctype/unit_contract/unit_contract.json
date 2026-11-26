@@ -363,6 +363,6 @@
  "title_field": "customer",
  "icon": "fa fa-file-text",
  "search_fields": "customer,unit",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

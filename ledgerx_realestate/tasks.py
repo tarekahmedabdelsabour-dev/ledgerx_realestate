@@ -41,9 +41,9 @@ def due_commissions():
 
 
 def bill_rentals():
-	for r in frappe.get_all("Rental Contract", filters={"status": "Active"}, pluck="name"):
+	for r in frappe.get_all("Property Rental Contract", filters={"status": "Active"}, pluck="name"):
 		try:
-			frappe.get_doc("Rental Contract", r).bill_due()
+			frappe.get_doc("Property Rental Contract", r).bill_due()
 			frappe.db.commit()
 		except Exception:
 			frappe.db.rollback()
@@ -52,9 +52,9 @@ def bill_rentals():
 
 def end_leases():
 	"""A lease past its end date is billed to its end and closed, and the unit is freed."""
-	for r in frappe.get_all("Rental Contract", filters={"status": "Active", "end_date": ["<", nowdate()]}, pluck="name"):
+	for r in frappe.get_all("Property Rental Contract", filters={"status": "Active", "end_date": ["<", nowdate()]}, pluck="name"):
 		try:
-			d = frappe.get_doc("Rental Contract", r)
+			d = frappe.get_doc("Property Rental Contract", r)
 			d.bill_due()
 			d.end_lease()
 			frappe.db.commit()

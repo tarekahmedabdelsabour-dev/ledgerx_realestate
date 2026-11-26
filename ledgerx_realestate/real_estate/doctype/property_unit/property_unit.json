@@ -255,6 +255,6 @@
  "title_field": "unit_number",
  "icon": "fa fa-home",
  "search_fields": "unit_number,project,building",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

@@ -21,7 +21,7 @@ Then restart the server.
 6. Collect: *Receive Payment*, or **Post Dated Cheque** (deposit, cleared, bounced). Late fees are charged monthly if the setting is above 0.
 7. **Real Estate Broker** (creates a supplier) and **Sales Commission**: due when the customer has paid the percent set in the settings; paid as a purchase invoice (broker) or an additional salary (salesman).
 8. Build: **Bill of Quantities**, **Construction Contract** (contractor = Supplier, retention %, advance %), advance payment, **Progress Claim** (posts a purchase invoice with retention deducted and the advance set against it), **Construction Progress**.
-9. After the sale: **Unit Handover** (checklist, defects, meters; starts the warranty), **Maintenance Request**, **Owners Association** + **Association Fee Run** (service charge invoices to the owners), **Rental Contract** (monthly invoices, yearly increase).
+9. After the sale: **Unit Handover** (checklist, defects, meters; starts the warranty), **Property Maintenance Request**, **Owners Association** + **Association Fee Run** (service charge invoices to the owners), **Property Rental Contract** (monthly invoices, yearly increase).
 10. Roles are created automatically: Real Estate Manager, Sales, Engineer, Accountant.
 
 ## How it is tied to the rest of the app

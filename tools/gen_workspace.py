@@ -12,20 +12,20 @@ CARDS = [  # (label, doctype, filters, function, fn_field)
 	("Draft Contracts", "Unit Contract", [["Unit Contract", "status", "=", "Draft"]], "Count", None),
 	("Cheques to Deposit", "Post Dated Cheque", [["Post Dated Cheque", "status", "=", "Received"]], "Count", None),
 	("Commissions Due", "Sales Commission", [["Sales Commission", "status", "=", "Due"]], "Count", None),
-	("Open Maintenance", "Maintenance Request", [["Maintenance Request", "status", "in", ["New", "Assigned", "In Progress"]]], "Count", None),
-	("Active Leases", "Rental Contract", [["Rental Contract", "status", "=", "Active"]], "Count", None),
+	("Open Maintenance", "Property Maintenance Request", [["Property Maintenance Request", "status", "in", ["New", "Assigned", "In Progress"]]], "Count", None),
+	("Active Leases", "Property Rental Contract", [["Property Rental Contract", "status", "=", "Active"]], "Count", None),
 ]
 CHARTS = [  # (name, doctype, type, kind, extra)
 	("Units by Status", "Property Unit", "Donut", "group", {"by": "status"}),
 	("Units by Project", "Property Unit", "Bar", "group", {"by": "project"}),
 	("Contracts per Month", "Unit Contract", "Bar", "series", {"based_on": "contract_date", "filters": [["Unit Contract", "status", "in", ["Active", "Delivered"]]]}),
-	("Maintenance by Category", "Maintenance Request", "Donut", "group", {"by": "category"}),
+	("Maintenance by Category", "Property Maintenance Request", "Donut", "group", {"by": "category"}),
 ]
 GROUPS = [  # (title, icon, collapsed, [(label, kind, target, icon)])
 	("Daily Work", None, 0, [
 		("Property Unit", "DocType", "Property Unit", "home"), ("Unit Reservation", "DocType", "Unit Reservation", "bookmark"),
 		("Unit Contract", "DocType", "Unit Contract", "file-text"), ("Post Dated Cheque", "DocType", "Post Dated Cheque", "banknote"),
-		("Unit Handover", "DocType", "Unit Handover", "key"), ("Maintenance Request", "DocType", "Maintenance Request", "wrench")]),
+		("Unit Handover", "DocType", "Unit Handover", "key"), ("Property Maintenance Request", "DocType", "Property Maintenance Request", "wrench")]),
 	("Projects", "building-2", 0, [
 		("Real Estate Project", "DocType", "Real Estate Project", "building-2"), ("Project Phase", "DocType", "Project Phase", "flag"),
 		("Building", "DocType", "Building", "building"), ("Unit Type", "DocType", "Unit Type", "layout-grid"),
@@ -37,7 +37,7 @@ GROUPS = [  # (title, icon, collapsed, [(label, kind, target, icon)])
 		("Progress Claim", "DocType", "Progress Claim", "file-check"), ("Construction Progress", "DocType", "Construction Progress", "trending-up")]),
 	("After Sale", "key", 0, [
 		("Owners Association", "DocType", "Owners Association", "users"), ("Association Fee Run", "DocType", "Association Fee Run", "calculator"),
-		("Rental Contract", "DocType", "Rental Contract", "key-round")]),
+		("Property Rental Contract", "DocType", "Property Rental Contract", "key-round")]),
 	("Reports", "bar-chart-3", 0, [
 		("Unit Inventory", "Report", "Unit Inventory", "layout-list"), ("Contracts and Collection", "Report", "Contracts and Collection", "trending-up"),
 		("Installments Due", "Report", "Installments Due", "alarm-clock"), ("Collection Forecast", "Report", "Collection Forecast", "calendar-range"),

@@ -17,12 +17,12 @@
 			if (frm.doc.status === "Available") {
 				frm.add_custom_button(__("Reserve"), () => frappe.new_doc("Unit Reservation", { unit: frm.doc.name }), __("Sell"));
 				frm.add_custom_button(__("Contract"), () => frappe.new_doc("Unit Contract", { unit: frm.doc.name }), __("Sell"));
-				frm.add_custom_button(__("Rent"), () => frappe.new_doc("Rental Contract", { unit: frm.doc.name }), __("Sell"));
+				frm.add_custom_button(__("Rent"), () => frappe.new_doc("Property Rental Contract", { unit: frm.doc.name }), __("Sell"));
 				frm.add_custom_button(__("Take Off Sale"), () => act(frm, "set_blocked", { blocked: 1 }), __("More"));
 			}
 			if (frm.doc.status === "Blocked") frm.add_custom_button(__("Put Back on Sale"), () => act(frm, "set_blocked", { blocked: 0 }));
 			if (frm.doc.contract) frm.add_custom_button(__("Open Contract"), () => frappe.set_route("Form", "Unit Contract", frm.doc.contract));
-			if (["Delivered", "Rented"].includes(frm.doc.status)) frm.add_custom_button(__("Maintenance Request"), () => frappe.new_doc("Maintenance Request", { unit: frm.doc.name }), __("Create"));
+			if (["Delivered", "Rented"].includes(frm.doc.status)) frm.add_custom_button(__("Property Maintenance Request"), () => frappe.new_doc("Property Maintenance Request", { unit: frm.doc.name }), __("Create"));
 		},
 	});
 })();

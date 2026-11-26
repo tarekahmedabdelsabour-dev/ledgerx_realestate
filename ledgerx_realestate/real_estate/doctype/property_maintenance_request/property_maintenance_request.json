@@ -144,7 +144,7 @@
  "modified": "2026-11-17 20:30:00.000000",
  "modified_by": "Administrator",
  "module": "Real Estate",
- "name": "Maintenance Request",
+ "name": "Property Maintenance Request",
  "owner": "Administrator",
  "sort_field": "creation",
  "sort_order": "DESC",
@@ -197,6 +197,6 @@
  ],
  "autoname": "naming_series:",
  "icon": "fa fa-wrench",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

@@ -5,7 +5,7 @@
 		d.show();
 	};
 	const MOP = { fieldname: "mode_of_payment", fieldtype: "Link", options: "Mode of Payment", label: __("Mode of Payment"), reqd: 1 };
-	frappe.ui.form.on("Maintenance Request", {
+	frappe.ui.form.on("Property Maintenance Request", {
 		refresh(frm) {
 			if (frm.is_new()) return;
 			if (!frm.doc.sales_invoice && frm.doc.charge > 0) frm.add_custom_button(__("Invoice the Owner"), () => act(frm, "invoice_owner")).addClass("btn-primary");

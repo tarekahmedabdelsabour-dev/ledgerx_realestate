@@ -128,7 +128,7 @@
  "modified": "2026-11-17 20:30:00.000000",
  "modified_by": "Administrator",
  "module": "Real Estate",
- "name": "Rental Contract",
+ "name": "Property Rental Contract",
  "owner": "Administrator",
  "sort_field": "creation",
  "sort_order": "DESC",
@@ -182,6 +182,6 @@
  "autoname": "naming_series:",
  "title_field": "tenant",
  "icon": "fa fa-key",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

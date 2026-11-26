@@ -189,6 +189,6 @@
  "autoname": "naming_series:",
  "title_field": "title",
  "icon": "fa fa-wrench",
- "allow_rename": 0,
- "track_changes": 1
+ "track_changes": 1,
+ "allow_rename": 0
 }

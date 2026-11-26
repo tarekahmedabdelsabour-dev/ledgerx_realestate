@@ -5,7 +5,7 @@
 		d.show();
 	};
 	const MOP = { fieldname: "mode_of_payment", fieldtype: "Link", options: "Mode of Payment", label: __("Mode of Payment"), reqd: 1 };
-	frappe.ui.form.on("Rental Contract", {
+	frappe.ui.form.on("Property Rental Contract", {
 		setup(frm) { frm.set_query("unit", () => ({ filters: { status: ["in", ["Available", "Delivered"]] } })); },
 		refresh(frm) {
 			if (frm.is_new()) return;

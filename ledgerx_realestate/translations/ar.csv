@@ -244,7 +244,7 @@ Maintenance Deposit,وديعة الصيانة
 Maintenance Deposit (%),وديعة الصيانة (%)
 Maintenance Deposit Account,حساب وديعة الصيانة
 Maintenance Income Account,حساب إيراد الصيانة
-Maintenance Request,طلب صيانة
+Property Maintenance Request,طلب صيانة
 Maintenance by Category,الصيانة حسب الفئة
 Maintenance deposit - {0},وديعة الصيانة - {0}
 Maintenance request {0},طلب الصيانة {0}
@@ -352,7 +352,7 @@ Renew,تجديد
 Rent,إيجار
 Rent Invoices,فواتير الإيجار
 Rent {0} - {1},إيجار {0} - {1}
-Rental Contract,عقد إيجار
+Property Rental Contract,عقد إيجار
 Rental Income Account,حساب إيراد الإيجار
 Rental Invoice,فاتورة إيجار
 Rented,مؤجرة

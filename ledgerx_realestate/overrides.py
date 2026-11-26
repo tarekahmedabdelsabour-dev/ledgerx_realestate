@@ -12,7 +12,7 @@ def _group(data, label, items, fields=None):
 
 
 def customer(data=None):
-	return _group(data, "Real Estate", ["Unit Reservation", "Unit Contract", "Maintenance Request"], {"Unit Contract": "customer"})
+	return _group(data, "Real Estate", ["Unit Reservation", "Unit Contract", "Property Maintenance Request"], {"Unit Contract": "customer"})
 
 
 def supplier(data=None):
@@ -24,7 +24,7 @@ def employee(data=None):
 
 
 def sales_invoice(data=None):
-	return _group(data, "Real Estate", ["Unit Contract", "Maintenance Request"], {"Unit Contract": "sales_invoice", "Maintenance Request": "sales_invoice"})
+	return _group(data, "Real Estate", ["Unit Contract", "Property Maintenance Request"], {"Unit Contract": "sales_invoice", "Property Maintenance Request": "sales_invoice"})
 
 
 def purchase_invoice(data=None):

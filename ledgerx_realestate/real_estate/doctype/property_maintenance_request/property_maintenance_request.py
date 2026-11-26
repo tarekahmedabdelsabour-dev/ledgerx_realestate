@@ -6,7 +6,7 @@ from frappe.utils import flt, getdate, nowdate
 from ledgerx_realestate.engine import accounting
 
 
-class MaintenanceRequest(Document):
+class PropertyMaintenanceRequest(Document):
 	def validate(self):
 		u = frappe.db.get_value("Property Unit", self.unit, ["owner_customer", "warranty_end", "project"], as_dict=True)
 		if not self.customer:

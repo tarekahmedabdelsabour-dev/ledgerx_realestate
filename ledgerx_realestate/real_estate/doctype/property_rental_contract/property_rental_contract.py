@@ -6,7 +6,7 @@ from frappe.utils import flt, getdate, nowdate
 from ledgerx_realestate.engine import accounting, logic
 
 
-class RentalContract(Document):
+class PropertyRentalContract(Document):
 	def validate(self):
 		if getdate(self.end_date) <= getdate(self.start_date):
 			frappe.throw(_("The lease must end after it starts"))
